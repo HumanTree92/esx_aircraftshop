@@ -28,3 +28,7 @@ The personal aircraft menu can be opened with /pa (like the vehicle shop /pv com
 start esx_aircraftshop
 ```
 5) If you want player management you have to set Config.EnablePlayerManagement to true in config.lua
+
+# Credits/Original Code
+* ESX-Org => https://github.com/ESX-Org
+  * esx_vehicleshop => https://github.com/ESX-Org/esx_vehicleshop
