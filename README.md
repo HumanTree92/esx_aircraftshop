@@ -7,27 +7,30 @@ This Aircraft Shop works just like esx_vehicleshop. However tho instead of Playe
 
 The personal aircraft menu can be opened with /pa (like the vehicle shop /pv command).
 
-# Requirement:
+* Auto mode (everyone can buy vehicles from the dealer)
+  * No need to download another resource
 
-* Player management (billing and boss actions)
-  * esx_society => https://github.com/FXServer-ESX/fxserver-esx_society
-  * esx_billing => https://github.com/FXServer-ESX/fxserver-esx_billing
+* Player management (the car dealer job): billing, boss actions and more!
+  * [esx_society](https://github.com/ESX-Org/esx_society)
+  * [esx_billing](https://github.com/ESX-Org/esx_billing)
+  * [esx_addonaccount](https://github.com/ESX-Org/esx_addonaccount)
+  * [esx_addoninventory](https://github.com/ESX-Org/esx_addoninventory)
+  * [cron](https://github.com/ESX-Org/cron)
   
-* Boat Garage
-  * esx_eden_aircraftgarage => https://github.com/HumanTree92/esx_eden_aircraftgarage
+* Aircraft Garage
+  * [esx_eden_aircraftgarage](https://github.com/HumanTree92/esx_eden_aircraftgarage)
 
-# Installation
+# Download & Installation
 
 1) CD in your resources/[esx] folder
 2) Clone the repository
-3) Import esx_aircraftshop.sql in your database
-
-4) Add this in your server.cfg :
+3) Import `esx_aircraftshop.sql` in your database
+4) Add this in your `server.cfg`:
 
 ```
 start esx_aircraftshop
 ```
-5) If you want player management you have to set Config.EnablePlayerManagement to true in config.lua
+5) If you want player management you have to set `Config.EnablePlayerManagement` to `true` in `config.lua`
 
 # Credits/Original Code
 * ESX-Org => https://github.com/ESX-Org
