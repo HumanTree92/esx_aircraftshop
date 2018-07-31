@@ -45,3 +45,6 @@ If you like this please check out some of my other stuff like
 * [esx_eden_garage](https://github.com/HumanTree92/esx_eden_garage)
 * [esx_panicbutton](https://github.com/HumanTree92/esx_panicbutton)
 * [FiveM_CustomMapAddons](https://github.com/HumanTree92/FiveM_CustomMapAddons)
+
+# If you appreciate any of my work & wish to give me a donation you can go donate to my Company/Community at the link below.
+* [Velociti Entertainment Donations](http://www.velocitientertainment.com/donations/)
