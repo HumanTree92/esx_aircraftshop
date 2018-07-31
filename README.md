@@ -21,16 +21,12 @@ The personal aircraft menu can be opened with /pa (like the vehicle shop /pv com
   * [esx_eden_aircraftgarage](https://github.com/HumanTree92/esx_eden_aircraftgarage)
 
 # Download & Installation
-
-1) CD in your resources/[esx] folder
-2) Clone the repository
+1) Download the .zip.
+2) Extract the .zip or Open the .zip.
 3) Import `esx_aircraftshop.sql` in your database
-4) Add this in your `server.cfg`:
-
-```
-start esx_aircraftshop
-```
-5) If you want player management you have to set `Config.EnablePlayerManagement` to `true` in `config.lua`
+4) Place `esx_aircraftshop` in your ESX Directory
+5) Add `start esx_aircraftshop` to your server.cfg
+6) If you want player management you have to set `Config.EnablePlayerManagement` to `true` in `config.lua`
 
 # Credits/Original Code
 * [ESX-Org](https://github.com/ESX-Org)
