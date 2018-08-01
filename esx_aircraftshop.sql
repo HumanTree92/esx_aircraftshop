@@ -57,7 +57,7 @@ INSERT INTO `aircraft_categories` (name, label) VALUES
 	('heli','Helicopters')
 ;
 
-CREATE TABLE `vehicles` (
+CREATE TABLE `aircrafts` (
 	`name` varchar(60) NOT NULL,
 	`model` varchar(60) NOT NULL,
 	`price` int(11) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE `vehicles` (
 	PRIMARY KEY (`model`)
 );
 
-INSERT INTO `vehicles` (name, model, price, category) VALUES
+INSERT INTO `aircrafts` (name, model, price, category) VALUES
 	('Alpha Z1','alphaz1',1595000,'plane'),
 	('Besra','besra',1150000,'plane'),
 	('Cuban 800','cuban800',240000,'plane'),
