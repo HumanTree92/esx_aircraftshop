@@ -174,7 +174,7 @@ function OpenShopMenu ()
   ESX.UI.Menu.Open(
     'default', GetCurrentResourceName(), 'vehicle_shop',
     {
-      title    = _U('car_dealer'),
+      title    = _U('aircraft_dealer'),
       align    = 'top-left',
       elements = elements
     },
@@ -407,7 +407,7 @@ function OpenResellerMenu ()
   ESX.UI.Menu.Open(
     'default', GetCurrentResourceName(), 'reseller',
     {
-      title    = _U('car_dealer'),
+      title    = _U('aircraft_dealer'),
       align    = 'top-left',
       elements = {
         {label = _U('buy_vehicle'),                    value = 'buy_vehicle'},
@@ -463,7 +463,7 @@ function OpenResellerMenu ()
               if closestPlayer == -1 or closestDistance > 3.0 then
                 ESX.ShowNotification(_U('no_players'))
               else
-                TriggerServerEvent('esx_billing:sendBill', GetPlayerServerId(closestPlayer), 'society_aircraftdealer', _U('car_dealer'), tonumber(data2.value))
+                TriggerServerEvent('esx_billing:sendBill', GetPlayerServerId(closestPlayer), 'society_aircraftdealer', _U('aircraft_dealer'), tonumber(data2.value))
               end
             end
           end,
@@ -927,13 +927,13 @@ end
 Citizen.CreateThread(function ()
 	local blip = AddBlipForCoord(Config.Zones.ShopEntering.Pos.x, Config.Zones.ShopEntering.Pos.y, Config.Zones.ShopEntering.Pos.z)
 
-	SetBlipSprite (blip, 326)
+	SetBlipSprite (blip, 90)
 	SetBlipDisplay(blip, 4)
 	SetBlipScale  (blip, 1.0)
 	SetBlipAsShortRange(blip, true)
 
 	BeginTextCommandSetBlipName("STRING")
-	AddTextComponentString(_U('car_dealer'))
+	AddTextComponentString(_U('aircraft_dealer'))
 	EndTextCommandSetBlipName(blip)
 end)
 
