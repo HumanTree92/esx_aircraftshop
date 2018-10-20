@@ -13,10 +13,14 @@ INSERT INTO `jobs` (name, label) VALUES
 ;
 
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('aircraftdealer',0,'recruit','Recrue',10,'{}','{}'),
+	('aircraftdealer',0,'recruit','Recruit',10,'{}','{}'),
 	('aircraftdealer',1,'novice','Novice',25,'{}','{}'),
-	('aircraftdealer',2,'experienced','Experimente',40,'{}','{}'),
-	('aircraftdealer',3,'boss','Patron',0,'{}','{}')
+	('aircraftdealer',2,'experienced','Expert',40,'{}','{}'),
+	('aircraftdealer',3,'boss','Boss',0,'{}','{}')
+;
+
+INSERT INTO `licenses` (type, label) VALUES
+  ('aircraft', "Aircraft License")
 ;
 
 CREATE TABLE `aircraftdealer_aircrafts` (
@@ -66,25 +70,31 @@ CREATE TABLE `aircrafts` (
 );
 
 INSERT INTO `aircrafts` (name, model, price, category) VALUES
-	('Alpha Z1','alphaz1',1595000,'plane'),
-	('Besra','besra',1150000,'plane'),
-	('Cuban 800','cuban800',240000,'plane'),
-	('Dodo','dodo',500000,'plane'),
-	('Duster','duster',275000,'plane'),
-	('Howard NX25','howard',975000,'plane'),
-	('Luxor','luxor',1625000,'plane'),
-	('Luxor Deluxe ','luxor2',10000000,'plane'),
-	('Mallard','stunt',250000,'plane'),
-	('Mammatus','mammatus',300000,'plane'),
-	('Nimbus','nimbus',1900000,'plane'),
-	('Shamal','shamal',1150000,'plane'),
-	('Velum','velum2',1323350,'plane'),
-	('Vestra','vestra',950000,'plane'),
-	('Frogger','frogger',1300000,'heli'),
-	('Maverick','maverick',780000,'heli'),
-	('SuperVolito','supervolito',2113000,'heli'),
-	('SuperVolito Carbon','supervolito2',3330000,'heli'),
-	('Swift','swift',1500000,'heli'),
-	('Swift Deluxe','swift2',5150000,'heli'),
-	('Volatus','volatus',2295000,'heli')
+	('Alpha Z1', 'alphaz1', 1121000, 'plane'),
+	('Besra', 'besra', 1000000, 'plane'),
+	('Cuban 800', 'cuban800', 240000, 'plane'),
+	('Dodo', 'dodo', 500000, 'plane'),
+	('Duster', 'duster', 175000, 'plane'),
+	('Howard NX25', 'howard', 975000, 'plane'),
+	('Luxor', 'luxor', 1500000, 'plane'),
+	('Luxor Deluxe ', 'luxor2', 1750000, 'plane'),
+	('Mallard', 'stunt', 250000, 'plane'),
+	('Mammatus', 'mammatus', 300000, 'plane'),
+	('Nimbus', 'nimbus', 900000, 'plane'),
+	('Rogue', 'rogue', 1000000, 'plane'),
+	('Sea Breeze', 'seabreeze', 850000, 'plane'),
+	('Shamal', 'shamal', 1150000, 'plane'),
+	('Ultra Light', 'microlight', 50000, 'plane'),
+	('Velum', 'velum2', 450000, 'plane'),
+	('Vestra', 'vestra', 950000, 'plane'),
+	('Buzzard', 'buzzard2', 500000, 'heli'),
+	('Frogger', 'frogger', 800000, 'heli'),
+	('Havok', 'havok', 250000, 'heli'),
+	('Maverick', 'maverick', 750000, 'heli'),
+	('Sea Sparrow', 'seasparrow', 815000, 'heli'),
+	('SuperVolito', 'supervolito', 1000000, 'heli'),
+	('SuperVolito Carbon', 'supervolito2', 1250000, 'heli'),
+	('Swift', 'swift', 1000000, 'heli'),
+	('Swift Deluxe', 'swift2', 1250000, 'heli'),
+	('Volatus', 'volatus', 1250000, 'heli')
 ;

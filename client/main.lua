@@ -20,6 +20,7 @@ local Categories              = {}
 local Vehicles                = {}
 local LastVehicles            = {}
 local CurrentVehicleData      = nil
+local Licenses                = {}
 
 ESX                           = nil
 
@@ -51,6 +52,13 @@ Citizen.CreateThread(function ()
 			Config.Zones.ShopEntering.Type = -1
 			Config.Zones.BossActions.Type  = -1
 		end
+	end
+end)
+
+RegisterNetEvent('esx_aircraftshop:loadLicenses')
+AddEventHandler('esx_aircraftshop:loadLicenses', function (licenses)
+	for i = 1, #licenses, 1 do
+		Licenses[licenses[i].type] = true
 	end
 end)
 
@@ -121,6 +129,27 @@ function ReturnVehicleProvider()
 		end)
 	end)
 
+end
+
+function OpenBuyLicenseMenu(zone)
+	ESX.UI.Menu.CloseAll()
+
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop_license',
+	{
+		title = _U('buy_license'),
+		elements = {
+			{ label = _U('yes') .. ' ($' .. Config.LicensePrice .. ')', value = 'yes' },
+			{ label = _U('no'), value = 'no' },
+		}
+	}, function (data, menu)
+		if data.current.value == 'yes' then
+			TriggerServerEvent('esx_aircraftshop:buyLicense')
+		end
+		menu.close()
+	end, function (data, menu)
+		menu.close()
+	end
+	)
 end
 
 function OpenShopMenu ()
@@ -994,7 +1023,15 @@ Citizen.CreateThread(function ()
 
 			if IsControlJustReleased(0, Keys['E']) then
 				if CurrentAction == 'shop_menu' then
-					OpenShopMenu()
+					if Config.EnableLicense == true then
+						if Licenses['aircraft'] ~= nil then
+							OpenShopMenu()
+						else
+							OpenBuyLicenseMenu()
+						end
+					else
+						OpenShopMenu()
+					end
 				elseif CurrentAction == 'reseller_menu' then
 					OpenResellerMenu()
 				elseif CurrentAction == 'give_back_vehicle' then

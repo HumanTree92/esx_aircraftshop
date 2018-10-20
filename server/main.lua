@@ -8,20 +8,13 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 TriggerEvent('esx_phone:registerNumber', 'aircraftdealer', _U('dealer_customers'), false, false)
 TriggerEvent('esx_society:registerSociety', 'aircraftdealer', _U('aircraft_dealer'), 'society_aircraftdealer', 'society_aircraftdealer', 'society_aircraftdealer', {type = 'private'})
 
-function RemoveOwnedVehicle (plate)
-	MySQL.Async.execute('DELETE FROM owned_aircrafts WHERE plate = @plate',
-	{
+function RemoveOwnedVehicle(plate)
+	MySQL.Async.execute('DELETE FROM owned_aircrafts WHERE plate = @plate', {
 		['@plate'] = plate
 	})
 end
 
-AddEventHandler('onMySQLReady', function()
-	LoadVehicles()
-end)
-
-function LoadVehicles()
-	hasSqlRun = true
-
+MySQL.ready(function()
 	Categories     = MySQL.Sync.fetchAll('SELECT * FROM aircraft_categories')
 	local vehicles = MySQL.Sync.fetchAll('SELECT * FROM aircrafts')
 
@@ -41,14 +34,33 @@ function LoadVehicles()
 	-- send information after db has loaded, making sure everyone gets vehicle information
 	TriggerClientEvent('esx_aircraftshop:sendCategories', -1, Categories)
 	TriggerClientEvent('esx_aircraftshop:sendVehicles', -1, Vehicles)
+end)
+
+function LoadLicenses (source)
+  TriggerEvent('esx_license:getLicenses', source, function (licenses)
+    TriggerClientEvent('esx_aircraftshop:loadLicenses', source, licenses)
+  end)
 end
 
--- extremely useful when restarting script mid-game
-Citizen.CreateThread(function()
-	Citizen.Wait(10000) -- hopefully enough for connection to the SQL server
+if Config.EnableLicense == true then
+  AddEventHandler('esx:playerLoaded', function (source)
+    LoadLicenses(source)
+  end)
+end
 
-	if not hasSqlRun then
-		LoadVehicles()
+RegisterServerEvent('esx_aircraftshop:buyLicense')
+AddEventHandler('esx_aircraftshop:buyLicense', function ()
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(source)
+
+	if xPlayer.get('money') >= Config.LicensePrice then
+		xPlayer.removeMoney(Config.LicensePrice)
+
+		TriggerEvent('esx_license:addLicense', _source, 'aircraft', function ()
+			LoadLicenses(_source)
+		end)
+	else
+		TriggerClientEvent('esx:showNotification', _source, _U('not_enough'))
 	end
 end)
 

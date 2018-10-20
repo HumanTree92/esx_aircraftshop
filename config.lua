@@ -7,6 +7,8 @@ Config.EnableOwnedVehicles        = true
 Config.EnableSocietyOwnedVehicles = false -- use with EnablePlayerManagement disabled, or else it wont have any effects
 Config.ResellPercentage           = 50
 Config.Locale                     = 'en'
+Config.EnableLicense              = true -- only turn this on if you are using esx_license
+Config.LicensePrice               = 25000
 
 -- looks like this: 'LLL NNN'
 -- The maximum plate length is 8 chars (including spaces & symbols), don't go past it!
