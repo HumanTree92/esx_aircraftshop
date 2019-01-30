@@ -37,7 +37,7 @@ end
 function IsPlateTaken(plate)
 	local callback = 'waiting'
 
-	ESX.TriggerServerCallback('esx_aircraftshop:isPlateTaken', function (isPlateTaken)
+	ESX.TriggerServerCallback('esx_aircraftshop:isPlateTaken', function(isPlateTaken)
 		callback = isPlateTaken
 	end, plate)
 
