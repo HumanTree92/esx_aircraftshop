@@ -4,6 +4,7 @@ Locales['en'] = {
   ['generic_shopitem']    = '$%s',
   ['aircraft_dealer']     = 'Dealership | Aircraft',
   ['buy_aircraft_shop']   = 'do you want to purchase %s for $%s?',
+  ['buy_license']         = 'Buy License',
   ['no']                  = 'no',
   ['yes']                 = 'yes',
   ['aircraft_purchased']  = 'you bought a aircraft',
