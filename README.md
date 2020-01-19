@@ -6,8 +6,8 @@ I did NOT create the Code. I only edited the esx_vehicleshop code to create this
 This Aircraft Shop works just like esx_vehicleshop. However tho instead of Players buying Cars they can Buy/Sell Aircrafts. I created this because i couldn't find a Aircraft Shop Script & instead of waiting for others i went ahead & did it myself. 
 
 # Requirements:
-* Auto mode (everyone can buy vehicles from the dealer)
-  * No need to download another resource
+* Required:
+  * [esx_dmvschool](https://github.com/ESX-Org/esx_dmvschool)
 * Optional:
   * [esx_advancedgarage](https://github.com/HumanTree92/esx_advancedgarage)
 
@@ -54,7 +54,7 @@ If you like this please check out some of my other stuff like
 ### License
 esx_aircraftshop - Aircraft Shop for ESX Servers.
 
-Copyright (C) 2011-2019 Velociti Entertainment
+Copyright (C) 2011-2020 Velociti Entertainment
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 

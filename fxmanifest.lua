@@ -1,8 +1,10 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'adamant'
+
+game 'gta5'
 
 description 'ESX Aircraft Shop'
 
-version '1.1.0'
+version '1.0.0'
 
 server_scripts {
 	'@mysql-async/lib/MySQL.lua',
@@ -20,6 +22,9 @@ client_scripts {
 	'client/main.lua'
 }
 
-dependency 'es_extended'
+dependencies {
+	'es_extended',
+	'esx_dmvschool'
+}
 
 export 'GeneratePlate'
