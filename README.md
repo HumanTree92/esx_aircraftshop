@@ -35,7 +35,7 @@ If you like this please check out some of my other stuff like
 * [esx_vehiclespawner](https://github.com/HumanTree92/esx_vehiclespawner)
 * [FiveM_CustomMapAddons](https://github.com/HumanTree92/FiveM_CustomMapAddons)
 
-# Archieved Scripts:
+# Archived Scripts:
 Scripts that will no longer be Maintained.
 * [esx_aircraftshop](https://github.com/HumanTree92/esx_aircraftshop)
 * [esx_boatshop](https://github.com/HumanTree92/esx_boatshop)
