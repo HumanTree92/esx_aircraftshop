@@ -7,6 +7,7 @@ description 'ESX Aircraft Shop'
 version '1.0.0'
 
 server_scripts {
+	'@async/async.lua',
 	'@mysql-async/lib/MySQL.lua',
 	'@es_extended/locale.lua',
 	'locales/en.lua',
@@ -22,9 +23,6 @@ client_scripts {
 	'client/main.lua'
 }
 
-dependencies {
-	'es_extended',
-	'esx_dmvschool'
-}
+dependency 'es_extended'
 
 export 'GeneratePlate'

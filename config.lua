@@ -1,13 +1,12 @@
 Config = {}
 Config.Locale = 'en'
 
-Config.DrawDistance = 100.0
-Config.MarkerColor  = { r = 120, g = 120, b = 240 }
+Config.DrawDistance = 100
+Config.MarkerColor  = {r = 120, g = 120, b = 240}
 
-Config.EnableOwnedVehicles = true -- If true then it will set the Vehicle Owner to the Player who bought it.
-Config.ResellPercentage    = 75 -- Sets the Resell Percentage | Example: $100 Car will resell for $75
-Config.LicenseEnable       = true -- Require people to own a Aircraft License when buying Vehicles? Requires esx_license
-Config.LicensePrice        = 25000 -- Sets the License Price if Config.LicenseEnable is true
+Config.ResellPercentage = 50
+Config.LicenseEnable    = true
+Config.LicensePrice     = 25000
 
 -- looks like this: 'LLL NNN'
 -- The maximum plate length is 8 chars (including spaces & symbols), don't go past it!
@@ -17,25 +16,25 @@ Config.PlateUseSpace = true
 
 Config.Zones = {
 	ShopEntering = { -- Marker for Accessing Shop
-		Pos   = { x = -940.06, y = -2963.15, z = 18.85 },
-		Size  = { x = 1.5, y = 1.5, z = 1.0 },
+		Pos   = vector3(-940.0, -2963.1, 18.8),
+		Size  = {x = 1.5, y = 1.5, z = 1.0},
 		Type  = 1
 	},
 	ShopInside = { -- Marker for Viewing Vehicles
-		Pos     = { x = -1874.76, y = -3137.59, z = 14.94 }, -- { x = -1075.01, y = -2933.22, z = 14.55 },
-		Size    = { x = 1.5, y = 1.5, z = 1.0 },
+		Pos     = vector3(-1874.7, -3137.5, 14.9), -- vector3(-1075.0, -2933.2, 14.5),
+		Size    = {x = 1.5, y = 1.5, z = 1.0},
 		Heading = 333.95, -- 59.9
 		Type    = -1
 	},
 	ShopOutside = { -- Marker for Purchasing Vehicles
-		Pos     = { x = -965.25, y = -2983.56, z = 14.55 },
-		Size    = { x = 1.5, y = 1.5, z = 1.0 },
+		Pos     = vector3(-965.2, -2983.5, 14.5),
+		Size    = {x = 1.5, y = 1.5, z = 1.0},
 		Heading = 59.9,
 		Type    = -1
 	},
 	ResellVehicle = { -- Marker for Selling Vehicles
-		Pos   = { x = -1003.24, y = -2920.79, z = 12.95 },
-		Size  = { x = 3.0, y = 3.0, z = 1.0 },
+		Pos   = vector3(-1003.2, -2920.7, 12.9),
+		Size  = {x = 3.0, y = 3.0, z = 1.0},
 		Type  = 1
 	}
 }
